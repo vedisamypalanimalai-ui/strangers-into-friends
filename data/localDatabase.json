@@ -1,0 +1,331 @@
+{
+  "Users": [
+    {
+      "UserID": "3581d074-e2d9-42df-996d-e2f25ab90eb9",
+      "FullName": "Platform Superadmin",
+      "Username": "superadmin",
+      "Mobile": "+1000000000",
+      "Email": "admin@strangersintofriends.com",
+      "PasswordHash": "$2a$10$NEt7OWqjZSpxbk/qNKKya.TvBJ/vtTZ2LFr4RpXqlfNxmIh12s8jy",
+      "DateOfBirth": "1995-01-01",
+      "Gender": "Other",
+      "Bio": "Strangers Into Friends Platform Administrator",
+      "Location": "HQ",
+      "ProfilePicture": "https://ui-avatars.com/api/?name=Admin&background=2563eb&color=fff&bold=true",
+      "Role": "admin",
+      "Status": "active",
+      "CreatedAt": "2026-11-07T13:27:26.880Z",
+      "LastLogin": "2026-11-07T18:11:26.834Z"
+    },
+    {
+      "UserID": "6467494a-310e-4826-a07d-7c1db8c150d6",
+      "FullName": "Alice Walker",
+      "Username": "alice_w",
+      "Mobile": "+15551112222",
+      "Email": "alice@example.com",
+      "PasswordHash": "$2a$10$MchmkjzvrS5IL5dJ0EaCrewbTuj.Fyu5lMbA0DoO6jcuQSosq/eAu",
+      "DateOfBirth": "2000-05-15",
+      "Gender": "Female",
+      "Bio": "Loves music and making new friends.",
+      "Location": "",
+      "ProfilePicture": "https://ui-avatars.com/api/?name=Alice%20Walker&background=7c3aed&color=ffffff&bold=true&rounded=true&size=200",
+      "Role": "user",
+      "Status": "active",
+      "CreatedAt": "2026-11-07T14:46:59.714Z",
+      "LastLogin": "2026-11-07T14:46:59.962Z"
+    },
+    {
+      "UserID": "87bfd913-4e9a-4ab7-bb76-cb2dfb40cd10",
+      "FullName": "Bob Dylan",
+      "Username": "bob_d",
+      "Mobile": "+15553334444",
+      "Email": "bob@example.com",
+      "PasswordHash": "$2a$10$It./r7ipxECqOxkIHteAXOhcUZfNoT4f7Cy4ktwpIrUZVE9mkyK8a",
+      "DateOfBirth": "1998-10-20",
+      "Gender": "Male",
+      "Bio": "Guitar player and stranger explorer.",
+      "Location": "",
+      "ProfilePicture": "https://ui-avatars.com/api/?name=Bob%20Dylan&background=7c3aed&color=ffffff&bold=true&rounded=true&size=200",
+      "Role": "user",
+      "Status": "active",
+      "CreatedAt": "2026-11-07T14:46:59.840Z",
+      "LastLogin": "2026-11-07T14:46:59.840Z"
+    },
+    {
+      "UserID": "8b9b34e0-3676-4c8e-91f5-185ba50ed789",
+      "FullName": "Alice Walker",
+      "Username": "alice_6276",
+      "Mobile": "+15551112222",
+      "Email": "alice_6276@example.com",
+      "PasswordHash": "$2a$10$Ryyu.1wLZybND0lybqUu5.p29Z33BZZH/5bPKjYYtIGyQE.f5Uzvq",
+      "DateOfBirth": "2000-05-15",
+      "Gender": "Female",
+      "Bio": "Loves music and making new friends.",
+      "Location": "",
+      "ProfilePicture": "https://ui-avatars.com/api/?name=Alice%20Walker&background=7c3aed&color=ffffff&bold=true&rounded=true&size=200",
+      "Role": "user",
+      "Status": "active",
+      "CreatedAt": "2026-11-07T18:11:26.417Z",
+      "LastLogin": "2026-11-07T18:11:26.652Z"
+    },
+    {
+      "UserID": "87a33a9c-603d-444b-aeac-bae7998daf7c",
+      "FullName": "Bob Dylan",
+      "Username": "bob_6276",
+      "Mobile": "+15553334444",
+      "Email": "bob_6276@example.com",
+      "PasswordHash": "$2a$10$MjL0Ty2e1lLlINqEWrRkGu/HpGH4Kelvt8RRKTzV.1VYpEaVb1BBC",
+      "DateOfBirth": "1998-10-20",
+      "Gender": "Male",
+      "Bio": "Guitar player and stranger explorer.",
+      "Location": "",
+      "ProfilePicture": "https://ui-avatars.com/api/?name=Bob%20Dylan&background=7c3aed&color=ffffff&bold=true&rounded=true&size=200",
+      "Role": "user",
+      "Status": "active",
+      "CreatedAt": "2026-11-07T18:11:26.538Z",
+      "LastLogin": "2026-11-07T18:11:26.538Z"
+    }
+  ],
+  "Messages": [
+    {
+      "MessageID": "89a13dbb-679d-4db8-8c75-d2fa1c39a8d5",
+      "ConversationID": "conv_6467494a-310e-4826-a07d-7c1db8c150d6_87bfd913-4e9a-4ab7-bb76-cb2dfb40cd10",
+      "SenderID": "6467494a-310e-4826-a07d-7c1db8c150d6",
+      "ReceiverID": "87bfd913-4e9a-4ab7-bb76-cb2dfb40cd10",
+      "MessageType": "text",
+      "Content": "Hey Bob! Nice to turn from strangers into friends! 😊",
+      "Timestamp": "2026-11-07T14:47:00.015Z",
+      "Status": "read",
+      "DeletedFor": "none"
+    },
+    {
+      "MessageID": "b991496e-51d1-4706-8269-78ca7e05b3f7",
+      "ConversationID": "conv_87a33a9c-603d-444b-aeac-bae7998daf7c_8b9b34e0-3676-4c8e-91f5-185ba50ed789",
+      "SenderID": "8b9b34e0-3676-4c8e-91f5-185ba50ed789",
+      "ReceiverID": "87a33a9c-603d-444b-aeac-bae7998daf7c",
+      "MessageType": "text",
+      "Content": "Hey Bob! Nice to turn from strangers into friends! 😊",
+      "Timestamp": "2026-11-07T18:11:26.706Z",
+      "Status": "read",
+      "DeletedFor": "none"
+    }
+  ],
+  "Conversations": [
+    {
+      "ConversationID": "conv_6467494a-310e-4826-a07d-7c1db8c150d6_87bfd913-4e9a-4ab7-bb76-cb2dfb40cd10",
+      "User1ID": "6467494a-310e-4826-a07d-7c1db8c150d6",
+      "User2ID": "87bfd913-4e9a-4ab7-bb76-cb2dfb40cd10",
+      "LastMessageID": "89a13dbb-679d-4db8-8c75-d2fa1c39a8d5",
+      "LastMessageContent": "Hey Bob! Nice to turn from strangers into friends! 😊",
+      "LastMessageTimestamp": "2026-11-07T14:47:00.015Z",
+      "UnreadCountUser1": 0,
+      "UnreadCountUser2": 0,
+      "CreatedAt": "2026-11-07T14:47:00.015Z",
+      "UpdatedAt": "2026-11-07T14:47:00.015Z"
+    },
+    {
+      "ConversationID": "conv_87a33a9c-603d-444b-aeac-bae7998daf7c_8b9b34e0-3676-4c8e-91f5-185ba50ed789",
+      "User1ID": "87a33a9c-603d-444b-aeac-bae7998daf7c",
+      "User2ID": "8b9b34e0-3676-4c8e-91f5-185ba50ed789",
+      "LastMessageID": "b991496e-51d1-4706-8269-78ca7e05b3f7",
+      "LastMessageContent": "Hey Bob! Nice to turn from strangers into friends! 😊",
+      "LastMessageTimestamp": "2026-11-07T18:11:26.706Z",
+      "UnreadCountUser1": 0,
+      "UnreadCountUser2": 0,
+      "CreatedAt": "2026-11-07T18:11:26.706Z",
+      "UpdatedAt": "2026-11-07T18:11:26.706Z"
+    }
+  ],
+  "FriendRequests": [
+    {
+      "RequestID": "8e4efd3d-971c-4ce0-b7e7-ea3cfcb9530c",
+      "SenderID": "6467494a-310e-4826-a07d-7c1db8c150d6",
+      "ReceiverID": "87bfd913-4e9a-4ab7-bb76-cb2dfb40cd10",
+      "Status": "accepted",
+      "CreatedAt": "2026-11-07T14:46:59.981Z",
+      "UpdatedAt": "2026-11-07T14:46:59.996Z"
+    },
+    {
+      "RequestID": "956daa63-c715-4469-ab79-b581c3071ca7",
+      "SenderID": "8b9b34e0-3676-4c8e-91f5-185ba50ed789",
+      "ReceiverID": "87a33a9c-603d-444b-aeac-bae7998daf7c",
+      "Status": "accepted",
+      "CreatedAt": "2026-11-07T18:11:26.675Z",
+      "UpdatedAt": "2026-11-07T18:11:26.691Z"
+    }
+  ],
+  "Friends": [
+    {
+      "FriendshipID": "512ac3a6-9e91-43fa-a201-b039ae92cac7",
+      "User1ID": "6467494a-310e-4826-a07d-7c1db8c150d6",
+      "User2ID": "87bfd913-4e9a-4ab7-bb76-cb2dfb40cd10",
+      "Status": "active",
+      "CreatedAt": "2026-11-07T14:46:59.996Z"
+    },
+    {
+      "FriendshipID": "f81944dd-ef2a-4339-8db7-ae994cb9fed2",
+      "User1ID": "8b9b34e0-3676-4c8e-91f5-185ba50ed789",
+      "User2ID": "87a33a9c-603d-444b-aeac-bae7998daf7c",
+      "Status": "active",
+      "CreatedAt": "2026-11-07T18:11:26.691Z"
+    }
+  ],
+  "Notifications": [
+    {
+      "NotificationID": "f6a209cb-9af5-446e-aca4-0a0d4efc2446",
+      "UserID": "87bfd913-4e9a-4ab7-bb76-cb2dfb40cd10",
+      "Type": "friend_request",
+      "Title": "New Friend Request",
+      "Body": "Alice Walker sent you a friend request!",
+      "Link": "/friends.html?tab=requests",
+      "IsRead": "false",
+      "CreatedAt": "2026-11-07T14:46:59.981Z"
+    },
+    {
+      "NotificationID": "e9d122e7-bc56-4165-bcca-9ed41a3f5b69",
+      "UserID": "6467494a-310e-4826-a07d-7c1db8c150d6",
+      "Type": "request_accepted",
+      "Title": "Friend Request Accepted!",
+      "Body": "Bob Dylan accepted your friend request. Say hello!",
+      "Link": "/chat.html",
+      "IsRead": "false",
+      "CreatedAt": "2026-11-07T14:46:59.996Z"
+    },
+    {
+      "NotificationID": "57339733-0cc4-42d9-a1a7-5ae489791e9a",
+      "UserID": "87a33a9c-603d-444b-aeac-bae7998daf7c",
+      "Type": "friend_request",
+      "Title": "New Friend Request",
+      "Body": "Alice Walker sent you a friend request!",
+      "Link": "/friends.html?tab=requests",
+      "IsRead": "false",
+      "CreatedAt": "2026-11-07T18:11:26.675Z"
+    },
+    {
+      "NotificationID": "36fc46b5-b6b7-4f72-af2a-9fc792b5ec5a",
+      "UserID": "8b9b34e0-3676-4c8e-91f5-185ba50ed789",
+      "Type": "request_accepted",
+      "Title": "Friend Request Accepted!",
+      "Body": "Bob Dylan accepted your friend request. Say hello!",
+      "Link": "/chat.html",
+      "IsRead": "false",
+      "CreatedAt": "2026-11-07T18:11:26.692Z"
+    }
+  ],
+  "BlockedUsers": [],
+  "Reports": [],
+  "Sessions": [
+    {
+      "SessionID": "da8d79db-4bdb-498d-8e42-fe3c01ef04e6",
+      "UserID": "6467494a-310e-4826-a07d-7c1db8c150d6",
+      "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDY3NDk0YS0zMTBlLTQ4MjYtYTA3ZC03YzFkYjhjMTUwZDYiLCJ1c2VybmFtZSI6ImFsaWNlX3ciLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDA2MjgxOSwiZXhwIjoxNzk0NjY3NjE5fQ.tG0mxYKAOOmOqQHHGCXeeyppMhoRgVwDBVP-buo5hEk",
+      "IPAddress": "::1",
+      "UserAgent": "axios/1.21.0",
+      "CreatedAt": "2026-11-07T14:46:59.721Z",
+      "ExpiresAt": "2026-11-14T14:46:59.721Z",
+      "IsValid": "true"
+    },
+    {
+      "SessionID": "ec57bba4-f709-44a7-bcf1-50ef7b396970",
+      "UserID": "87bfd913-4e9a-4ab7-bb76-cb2dfb40cd10",
+      "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4N2JmZDkxMy00ZTlhLTRhYjctYmI3Ni1jYjJkZmI0MGNkMTAiLCJ1c2VybmFtZSI6ImJvYl9kIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3OTQwNjI4MTksImV4cCI6MTc5NDY2NzYxOX0.7LdDtC03JXxdxwicVuknb5XM7kJbLvDUhWLmzJmboDs",
+      "IPAddress": "::1",
+      "UserAgent": "axios/1.21.0",
+      "CreatedAt": "2026-11-07T14:46:59.843Z",
+      "ExpiresAt": "2026-11-14T14:46:59.843Z",
+      "IsValid": "true"
+    },
+    {
+      "SessionID": "8ab19e12-9103-4c1f-8e49-da36d63e158e",
+      "UserID": "6467494a-310e-4826-a07d-7c1db8c150d6",
+      "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDY3NDk0YS0zMTBlLTQ4MjYtYTA3ZC03YzFkYjhjMTUwZDYiLCJ1c2VybmFtZSI6ImFsaWNlX3ciLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDA2MjgxOSwiZXhwIjoxNzk0NjY3NjE5fQ.tG0mxYKAOOmOqQHHGCXeeyppMhoRgVwDBVP-buo5hEk",
+      "IPAddress": "::1",
+      "UserAgent": "axios/1.21.0",
+      "CreatedAt": "2026-11-07T14:46:59.965Z",
+      "ExpiresAt": "2026-11-14T14:46:59.965Z",
+      "IsValid": "true"
+    },
+    {
+      "SessionID": "453afea3-9a0e-4fa2-8e22-b5fcde709ffc",
+      "UserID": "3581d074-e2d9-42df-996d-e2f25ab90eb9",
+      "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzNTgxZDA3NC1lMmQ5LTQyZGYtOTk2ZC1lMmYyNWFiOTBlYjkiLCJ1c2VybmFtZSI6InN1cGVyYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3OTQwNjI4MjAsImV4cCI6MTc5NDY2NzYyMH0.n_vos30XMzcEHF7vV_UTiaTxYoXNyZclpqhm_L17LG8",
+      "IPAddress": "::1",
+      "UserAgent": "axios/1.21.0",
+      "CreatedAt": "2026-11-07T14:47:00.139Z",
+      "ExpiresAt": "2026-11-14T14:47:00.139Z",
+      "IsValid": "true"
+    },
+    {
+      "SessionID": "515eca15-f9d1-426c-95cb-487e25ec1ce5",
+      "UserID": "8b9b34e0-3676-4c8e-91f5-185ba50ed789",
+      "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4YjliMzRlMC0zNjc2LTRjOGUtOTFmNS0xODViYTUwZWQ3ODkiLCJ1c2VybmFtZSI6ImFsaWNlXzYyNzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDA3NTA4NiwiZXhwIjoxNzk0Njc5ODg2fQ.f6jGiwxmZXzMRDrX9OXiHas80uFa3O_H6r8tlvoPvr8",
+      "IPAddress": "::1",
+      "UserAgent": "axios/1.21.0",
+      "CreatedAt": "2026-11-07T18:11:26.425Z",
+      "ExpiresAt": "2026-11-14T18:11:26.425Z",
+      "IsValid": "true"
+    },
+    {
+      "SessionID": "aafe1dc0-0b55-45d0-b26f-ee746ded2fe9",
+      "UserID": "87a33a9c-603d-444b-aeac-bae7998daf7c",
+      "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4N2EzM2E5Yy02MDNkLTQ0NGItYWVhYy1iYWU3OTk4ZGFmN2MiLCJ1c2VybmFtZSI6ImJvYl82Mjc2Iiwicm9sZSI6InVzZXIiLCJpYXQiOjE3OTQwNzUwODYsImV4cCI6MTc5NDY3OTg4Nn0.gCT65TPQMwASruz1gZv0Vhe-sBw1pNiOg-dlH2CT9MI",
+      "IPAddress": "::1",
+      "UserAgent": "axios/1.21.0",
+      "CreatedAt": "2026-11-07T18:11:26.541Z",
+      "ExpiresAt": "2026-11-14T18:11:26.541Z",
+      "IsValid": "true"
+    },
+    {
+      "SessionID": "c968ca4a-263f-4f00-8eb5-36ce4560a4ed",
+      "UserID": "8b9b34e0-3676-4c8e-91f5-185ba50ed789",
+      "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4YjliMzRlMC0zNjc2LTRjOGUtOTFmNS0xODViYTUwZWQ3ODkiLCJ1c2VybmFtZSI6ImFsaWNlXzYyNzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTc5NDA3NTA4NiwiZXhwIjoxNzk0Njc5ODg2fQ.f6jGiwxmZXzMRDrX9OXiHas80uFa3O_H6r8tlvoPvr8",
+      "IPAddress": "::1",
+      "UserAgent": "axios/1.21.0",
+      "CreatedAt": "2026-11-07T18:11:26.656Z",
+      "ExpiresAt": "2026-11-14T18:11:26.656Z",
+      "IsValid": "true"
+    },
+    {
+      "SessionID": "bcf152d7-2e25-4cae-be2c-21baa3462119",
+      "UserID": "3581d074-e2d9-42df-996d-e2f25ab90eb9",
+      "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzNTgxZDA3NC1lMmQ5LTQyZGYtOTk2ZC1lMmYyNWFiOTBlYjkiLCJ1c2VybmFtZSI6InN1cGVyYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3OTQwNzUwODYsImV4cCI6MTc5NDY3OTg4Nn0.tIKGInwoh_8iaWUfh3MSqf_n88nfMfHSl0qfEedBtDc",
+      "IPAddress": "::1",
+      "UserAgent": "axios/1.21.0",
+      "CreatedAt": "2026-11-07T18:11:26.836Z",
+      "ExpiresAt": "2026-11-14T18:11:26.836Z",
+      "IsValid": "true"
+    }
+  ],
+  "Settings": [
+    {
+      "Key": "PlatformName",
+      "Value": "STRANGERS INTO FRIENDS",
+      "Description": "Platform title",
+      "UpdatedAt": "2026-11-07T13:27:26.526Z"
+    },
+    {
+      "Key": "Tagline",
+      "Value": "Meet Strangers. Make Friends. Share Feelings.",
+      "Description": "Platform hero tagline",
+      "UpdatedAt": "2026-11-07T13:27:26.528Z"
+    },
+    {
+      "Key": "AllowRegistration",
+      "Value": "true",
+      "Description": "Allow new user registration",
+      "UpdatedAt": "2026-11-07T13:27:26.528Z"
+    },
+    {
+      "Key": "MaintenanceMode",
+      "Value": "false",
+      "Description": "Maintenance mode status",
+      "UpdatedAt": "2026-11-07T13:27:26.528Z"
+    },
+    {
+      "Key": "MaxUploadSizeMB",
+      "Value": "5",
+      "Description": "Max image upload size",
+      "UpdatedAt": "2026-11-07T13:27:26.528Z"
+    }
+  ]
+}

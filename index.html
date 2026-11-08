@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STRANGERS INTO FRIENDS — Meet Strangers. Make Friends. Share Feelings.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <span>STRANGERS <span class="gradient-text">INTO FRIENDS</span></span>
+      </a>
+
+      <div class="nav-actions" id="nav-user-area">
+        <a href="login.html" class="btn btn-outline btn-sm">Sign In</a>
+        <a href="signup.html" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-badge">
+          <span class="status-dot online"></span>
+          <span>A Safe, Modern Space for Real Human Connection</span>
+        </div>
+        <h1 class="hero-title">
+          Meet Strangers. Make Friends. <span class="gradient-text">Share Feelings.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Break out of your bubble. Connect with genuine people across the world in real-time, have meaningful conversations, and turn random strangers into lifelong friends.
+        </p>
+
+        <div class="hero-cta">
+          <a href="signup.html" class="btn btn-primary btn-lg">
+            <span>Join Free Now</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="login.html" class="btn btn-secondary btn-lg">Sign In to Dashboard</a>
+        </div>
+
+        <!-- Hero Stats Cards -->
+        <div class="stats-grid" style="max-width: 900px; margin: 0 auto 3rem;">
+          <div class="stat-card">
+            <div class="stat-icon purple">⚡</div>
+            <div>
+              <div class="stat-value">100%</div>
+              <div class="stat-label">Real-Time Messaging</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon blue">🛡️</div>
+            <div>
+              <div class="stat-value">Private</div>
+              <div class="stat-label">Secure & Moderated</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon green">📊</div>
+            <div>
+              <div class="stat-value">100%</div>
+              <div class="stat-label">Google Sheets Backed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container" style="padding-bottom: 5rem;">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <h2 style="font-size: 2.25rem; margin-bottom: 0.75rem;">Why Strangers Into Friends?</h2>
+        <p style="color: var(--text-secondary); max-width: 580px; margin: 0 auto;">Everything you need to discover friendly individuals and share genuine moments safely.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-box">💬</div>
+          <h3 class="feature-title">Real-Time Instant Chat</h3>
+          <p class="feature-desc">Powered by Socket.IO with typing indicators, read receipts, media sharing, and instant audio feedback for active chats.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">🎲</div>
+          <h3 class="feature-title">Meet Strangers Instantly</h3>
+          <p class="feature-desc">Our smart discovery system connects you with random active users who share an open mindset and want to make friends.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">👥</div>
+          <h3 class="feature-title">Friend Management</h3>
+          <p class="feature-desc">Send friend requests, accept, decline, and see live online/offline presence dots for all your connected friends.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">🔒</div>
+          <h3 class="feature-title">Strict Privacy & Safety</h3>
+          <p class="feature-desc">Passwords encrypted with bcrypt. 1-click user blocking and prompt report moderation keep the community safe.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">📸</div>
+          <h3 class="feature-title">Photos & Emojis</h3>
+          <p class="feature-desc">Express yourself with rich emoji popovers and seamless image attachments directly in your one-on-one conversations.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">📈</div>
+          <h3 class="feature-title">Google Sheets Powered</h3>
+          <p class="feature-desc">Zero complex external database setups required. All data persists securely across 10 organized Google Sheets tabs.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="brand-logo">
+            <div class="logo-icon">💬</div>
+            <span>STRANGERS <span class="gradient-text">INTO FRIENDS</span></span>
+          </a>
+          <p>The modern social chat experience engineered to turn strangers into friends. Safe, friendly, and real-time.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="signup.html">Join Platform</a></li>
+            <li><a href="login.html">Sign In</a></li>
+            <li><a href="chat.html">Live Chat</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Community</h4>
+          <ul class="footer-links">
+            <li><a href="friends.html">Browse Friends</a></li>
+            <li><a href="profile.html">User Profiles</a></li>
+            <li><a href="settings.html">Account Settings</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Security</h4>
+          <ul class="footer-links">
+            <li><a href="#">Bcrypt Encryption</a></li>
+            <li><a href="#">Privacy Protection</a></li>
+            <li><a href="#">18+ Verified</a></li>
+            <li><a href="#">Google Sheets Bridge</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 STRANGERS INTO FRIENDS. All rights reserved.</div>
+        <div>Designed with premium dark gradients & modern real-time WebSockets.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/socket.io/socket.io.js" onerror="console.info('Socket.IO running in local or offline mode')"></script>
+  <script src="js/api.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/socket-client.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings — STRANGERS INTO FRIENDS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="dashboard.html" class="brand-logo">
+        <div class="logo-icon">💬</div>
+        <span>STRANGERS <span class="gradient-text">INTO FRIENDS</span></span>
+      </a>
+
+      <div class="nav-actions" id="nav-user-area">
+        <!-- Injected via utils.js -->
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 3rem 1.5rem 5rem; max-width: 860px;">
+    <h1 style="font-size: 2rem; color: #fff; margin-bottom: 0.5rem;">Account & Preferences</h1>
+    <p style="color: var(--text-secondary); margin-bottom: 2.5rem;">Manage your security, notifications, and profile preferences.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 2rem;">
+      <!-- Account Info Overview -->
+      <div class="section-card">
+        <h3 class="section-title" style="margin-bottom: 1.25rem;">Account Overview</h3>
+        <div class="auth-grid-2">
+          <div class="form-group">
+            <label class="form-label">Username</label>
+            <input type="text" id="settings-username" class="form-input" disabled style="opacity: 0.7;">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" id="settings-email" class="form-input" disabled style="opacity: 0.7;">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Mobile Number</label>
+          <input type="text" id="settings-mobile" class="form-input" disabled style="opacity: 0.7;">
+        </div>
+        <p style="font-size: 0.82rem; color: var(--text-muted);">
+          To update your registered mobile or email, please contact our support team.
+        </p>
+      </div>
+
+      <!-- Change Password -->
+      <div class="section-card">
+        <h3 class="section-title" style="margin-bottom: 1.25rem;">Change Password</h3>
+        <form id="change-password-form">
+          <div class="form-group">
+            <label class="form-label" for="current-password">Current Password</label>
+            <input type="password" id="current-password" class="form-input" placeholder="Enter existing password" required>
+          </div>
+          <div class="auth-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="new-password">New Password</label>
+              <input type="password" id="new-password" class="form-input" placeholder="Min 6 characters" minlength="6" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="confirm-password">Confirm New Password</label>
+              <input type="password" id="confirm-password" class="form-input" placeholder="Re-type new password" minlength="6" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Update Password</button>
+        </form>
+      </div>
+
+      <!-- Sound & Notifications Preferences -->
+      <div class="section-card">
+        <h3 class="section-title" style="margin-bottom: 1.25rem;">Notifications & Audio</h3>
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid var(--border-subtle);">
+          <div>
+            <div style="font-weight: 600; color: #fff;">Notification Chimes</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary);">Play audio alert on incoming messages and friend requests</div>
+          </div>
+          <label style="position: relative; display: inline-block; width: 48px; height: 26px; cursor: pointer;">
+            <input type="checkbox" id="toggle-sound-effects" checked style="opacity: 0; width: 0; height: 0;">
+            <span style="position: absolute; inset: 0; background-color: var(--primary); border-radius: 24px; transition: .3s;"></span>
+          </label>
+        </div>
+
+        <h4 style="font-size: 1rem; color: #fff; margin: 1.5rem 0 0.75rem;">Recent Notifications</h4>
+        <div id="notifications-list">
+          <div style="color: var(--text-muted); font-size: 0.88rem;">Loading notifications...</div>
+        </div>
+      </div>
+
+      <!-- Sign Out / Session -->
+      <div class="section-card" style="border-color: rgba(239, 68, 68, 0.2);">
+        <h3 class="section-title" style="color: #f87171; margin-bottom: 0.5rem;">Session Management</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.25rem;">
+          End your active session on this device. You will need to sign in with your credentials again.
+        </p>
+        <button id="btn-logout-settings" class="btn btn-danger">
+          Sign Out of Account
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script src="/socket.io/socket.io.js" onerror="console.info('Socket.IO offline or local mode')"></script>
+  <script src="js/api.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/socket-client.js"></script>
+  <script src="js/settings.js"></script>
+</body>
+</html>

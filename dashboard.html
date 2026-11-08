@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — STRANGERS INTO FRIENDS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Global Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="dashboard.html" class="brand-logo">
+        <div class="logo-icon">💬</div>
+        <span>STRANGERS <span class="gradient-text">INTO FRIENDS</span></span>
+      </a>
+
+      <div class="nav-actions" id="nav-user-area">
+        <!-- Injected via utils.js -->
+      </div>
+    </div>
+  </header>
+
+  <main class="container dashboard-container">
+    <!-- Welcome Banner with Quick Action -->
+    <div class="welcome-banner">
+      <div class="welcome-text">
+        <h1>Welcome, <span id="welcome-user-name" class="gradient-text">Friend</span>! 👋</h1>
+        <p>Ready to meet someone new today? Turn a stranger into your next best friend.</p>
+      </div>
+      <div>
+        <button id="btn-meet-stranger" class="btn btn-primary btn-lg" style="box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          Meet a Stranger
+        </button>
+      </div>
+    </div>
+
+    <!-- Quick Stats Grid -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon purple">👥</div>
+        <div>
+          <div class="stat-value" id="stat-total-friends">0</div>
+          <div class="stat-label">Total Friends</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon green">🟢</div>
+        <div>
+          <div class="stat-value" id="stat-online-friends">0</div>
+          <div class="stat-label">Online Friends</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon blue">💬</div>
+        <div>
+          <div class="stat-value" id="stat-active-chats">0</div>
+          <div class="stat-label">Active Chats</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon orange">🔔</div>
+        <div>
+          <div class="stat-value" id="stat-unread-messages">0</div>
+          <div class="stat-label">Unread Messages</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Online Friends Carousel -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-title">Online Friends Now</div>
+        <a href="friends.html?tab=online" style="font-size: 0.88rem; color: var(--primary);">View all &rarr;</a>
+      </div>
+      <div class="online-friends-list" id="online-friends-container">
+        <!-- Injected via dashboard.js -->
+        <div style="color: var(--text-muted); font-size: 0.9rem;">Checking online presence...</div>
+      </div>
+    </div>
+
+    <!-- Main Dashboard Split Sections -->
+    <div class="dashboard-sections-grid">
+      <!-- Left Column: Recent Conversations & Quick Search -->
+      <div>
+        <!-- Search Strangers / Users Input -->
+        <div class="section-card" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+          <label class="form-label" style="margin-bottom: 0.5rem;">Search Community Members</label>
+          <div class="input-icon-wrap">
+            <span class="input-icon">🔍</span>
+            <input type="text" id="dashboard-user-search" class="form-input" placeholder="Search users by name or @username to connect...">
+          </div>
+          <div id="search-results-container" style="display: none; margin-top: 0.75rem; background: #121522; border: 1px solid var(--border-subtle); border-radius: 10px; max-height: 240px; overflow-y: auto;"></div>
+        </div>
+
+        <!-- Recent Conversations -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">Recent Conversations</div>
+            <a href="chat.html" class="btn btn-outline btn-sm">Open Chat Room</a>
+          </div>
+          <div id="recent-chats-container" class="conversations-scroll" style="max-height: 380px;">
+            <div style="text-align: center; padding: 2rem; color: var(--text-muted);">Loading conversations...</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Profile Card & Pending Requests -->
+      <div>
+        <!-- My Profile Card -->
+        <div class="section-card" style="text-align: center;">
+          <div class="avatar-wrapper" style="margin-bottom: 1rem;">
+            <img id="dash-user-avatar" src="" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid var(--primary); object-fit: cover;" alt="Avatar">
+            <span class="status-dot online"></span>
+          </div>
+          <h3 id="dash-user-fullname" style="font-size: 1.2rem; color: #fff;">User</h3>
+          <div id="dash-user-handle" style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">@username</div>
+          <p id="dash-user-bio" style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem; background: rgba(255,255,255,0.03); padding: 0.75rem; border-radius: 8px;">
+            ...
+          </p>
+          <div style="display: flex; gap: 0.5rem; justify-content: center;">
+            <a href="profile.html" class="btn btn-outline btn-sm" style="flex: 1;">Edit Profile</a>
+            <a href="settings.html" class="btn btn-secondary btn-sm" style="flex: 1;">Settings</a>
+          </div>
+        </div>
+
+        <!-- Pending Friend Requests -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-title">Friend Requests</div>
+            <a href="friends.html?tab=requests" style="font-size: 0.85rem; color: var(--primary);">Manage</a>
+          </div>
+          <div id="friend-requests-container">
+            <div style="color: var(--text-muted); font-size: 0.88rem;">Loading requests...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Stranger Finder Modal -->
+  <div class="modal-backdrop" id="stranger-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Turn a Stranger Into a Friend</h3>
+        <button class="modal-close" onclick="document.getElementById('stranger-modal').classList.remove('open')">&times;</button>
+      </div>
+      <div class="modal-body" id="stranger-modal-body">
+        <!-- Injected via dashboard.js -->
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js" onerror="console.info('Socket.IO offline or local mode')"></script>
+  <script src="js/api.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/socket-client.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

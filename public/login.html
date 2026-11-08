@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In — STRANGERS INTO FRIENDS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">💬</div>
+        <span>STRANGERS <span class="gradient-text">INTO FRIENDS</span></span>
+      </a>
+
+      <div class="nav-actions">
+        <span style="font-size: 0.9rem; color: var(--text-secondary);">Don't have an account?</span>
+        <a href="signup.html" class="btn btn-outline btn-sm">Create One</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1 class="auth-title">Welcome Back</h1>
+        <p class="auth-subtitle">Sign in to connect with your friends and discover strangers.</p>
+      </div>
+
+      <div id="auth-error-box" class="form-error" style="display: none; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); padding: 0.85rem; border-radius: 8px; margin-bottom: 1.25rem; color: #f87171; font-weight: 500;"></div>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label class="form-label" for="identifier">Username or Email</label>
+          <div class="input-icon-wrap">
+            <span class="input-icon">👤</span>
+            <input type="text" id="identifier" class="form-input" placeholder="Enter username or email" required autofocus>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+            <label class="form-label" for="password" style="margin-bottom: 0;">Password</label>
+            <a href="#" id="btn-forgot-password" style="font-size: 0.82rem; color: var(--primary);">Forgot password?</a>
+          </div>
+          <div class="input-icon-wrap">
+            <span class="input-icon">🔒</span>
+            <input type="password" id="password" class="form-input" placeholder="Enter your password" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1rem;">
+          Sign In
+        </button>
+
+        <p class="auth-footer">
+          New here? <a href="signup.html" style="font-weight: 600;">Create a free account</a>
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <!-- Forgot / Reset Password Modal -->
+  <div class="modal-backdrop" id="forgot-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Password Recovery</h3>
+        <button class="modal-close" id="close-forgot-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="reset-step-1">
+          <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.25rem;">
+            Enter your registered email address to receive a secure password reset token.
+          </p>
+          <div class="form-group">
+            <label class="form-label" for="reset-email">Email Address</label>
+            <input type="email" id="reset-email" class="form-input" placeholder="your@email.com">
+          </div>
+          <button type="button" class="btn btn-primary" id="btn-send-reset-code" style="width: 100%;">
+            Get Reset Code
+          </button>
+        </div>
+
+        <div id="reset-step-2" style="display: none;">
+          <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.25rem;">
+            Enter the 6-digit reset code and your new password.
+          </p>
+          <form id="reset-password-form">
+            <div class="form-group">
+              <label class="form-label" for="reset-code">Reset Code</label>
+              <input type="text" id="reset-code" class="form-input" placeholder="6-digit code" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="new-password">New Password</label>
+              <input type="password" id="new-password" class="form-input" placeholder="At least 6 characters" minlength="6" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Set New Password & Sign In
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js" onerror="console.info('Socket.IO offline or local mode')"></script>
+  <script src="js/api.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

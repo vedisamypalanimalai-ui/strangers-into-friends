@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friends & Strangers — STRANGERS INTO FRIENDS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="dashboard.html" class="brand-logo">
+        <div class="logo-icon">💬</div>
+        <span>STRANGERS <span class="gradient-text">INTO FRIENDS</span></span>
+      </a>
+
+      <div class="nav-actions" id="nav-user-area">
+        <!-- Injected via utils.js -->
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 2.5rem 1.5rem 5rem;">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 style="font-size: 2rem; color: #fff; margin-bottom: 0.25rem;">Community & Friends</h1>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">Manage your connections, find strangers, and see who is online.</p>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem;">
+        <a href="chat.html" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Open Chat
+        </a>
+      </div>
+    </div>
+
+    <!-- Tabs Navigation -->
+    <div class="tabs-nav">
+      <button class="tab-btn active" data-tab="tab-all">
+        All Friends (<span id="all-friends-count">0</span>)
+      </button>
+      <button class="tab-btn" data-tab="tab-online">
+        Online (<span id="online-friends-count">0</span>)
+      </button>
+      <button class="tab-btn" data-tab="tab-requests">
+        Friend Requests (<span id="requests-count">0</span>)
+      </button>
+      <button class="tab-btn" data-tab="tab-discover">
+        Discover Strangers
+      </button>
+      <button class="tab-btn" data-tab="tab-blocked">
+        Blocked Users
+      </button>
+    </div>
+
+    <!-- Tab 1: All Friends -->
+    <div class="tab-pane active" id="tab-all">
+      <div style="margin-bottom: 1.5rem; max-width: 420px;">
+        <div class="input-icon-wrap">
+          <span class="input-icon">🔍</span>
+          <input type="text" id="friends-search-input" class="form-input" placeholder="Filter friends by name or username...">
+        </div>
+      </div>
+      <div class="friends-grid" id="all-friends-grid">
+        <div style="color: var(--text-muted); padding: 2rem;">Loading friends...</div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Online Friends -->
+    <div class="tab-pane" id="tab-online">
+      <div class="friends-grid" id="online-friends-grid">
+        <div style="color: var(--text-muted); padding: 2rem;">Checking online presence...</div>
+      </div>
+    </div>
+
+    <!-- Tab 3: Friend Requests -->
+    <div class="tab-pane" id="tab-requests">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+        <div>
+          <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 1rem;">Received Requests</h3>
+          <div id="received-requests-list">
+            <div style="color: var(--text-muted);">Loading incoming requests...</div>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 1rem;">Sent Requests</h3>
+          <div id="sent-requests-list">
+            <div style="color: var(--text-muted);">Loading outgoing requests...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 4: Discover Strangers -->
+    <div class="tab-pane" id="tab-discover">
+      <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 14px; padding: 1.5rem; margin-bottom: 2rem;">
+        <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 0.5rem;">Find Strangers to Connect With</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.25rem;">
+          Search active community members by name or username to break the ice and turn strangers into friends.
+        </p>
+        <div class="input-icon-wrap" style="max-width: 500px;">
+          <span class="input-icon">🔍</span>
+          <input type="text" id="discover-search-input" class="form-input" placeholder="Type a name, interest, or username...">
+        </div>
+      </div>
+
+      <div class="friends-grid" id="discover-results-grid">
+        <div style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 2rem;">
+          Type above to search across registered users.
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 5: Blocked Users -->
+    <div class="tab-pane" id="tab-blocked">
+      <div style="max-width: 600px;">
+        <h3 style="font-size: 1.15rem; color: #fff; margin-bottom: 1rem;">Blocked Accounts</h3>
+        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.5rem;">
+          Blocked accounts cannot see your online presence, send you messages, or find you in search.
+        </p>
+        <div id="blocked-users-list">
+          <div style="color: var(--text-muted);">Loading blocked users...</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/socket.io/socket.io.js" onerror="console.info('Socket.IO offline or local mode')"></script>
+  <script src="js/api.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/socket-client.js"></script>
+  <script src="js/friends.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Portal — STRANGERS INTO FRIENDS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="admin.html" class="brand-logo">
+        <div class="logo-icon" style="background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);">🛡️</div>
+        <span>STRANGERS <span class="gradient-text">ADMIN</span></span>
+      </a>
+
+      <div class="nav-actions" id="nav-user-area">
+        <!-- Injected via utils.js -->
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 2.5rem 1.5rem 5rem;">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h1 style="font-size: 2rem; color: #fff; margin-bottom: 0.25rem;">Platform Administration</h1>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">Monitor real-time system metrics, manage users, and review community reports.</p>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem;">
+        <a href="dashboard.html" class="btn btn-outline btn-sm">Member Dashboard</a>
+        <a href="chat.html" class="btn btn-primary btn-sm">Live Chat</a>
+      </div>
+    </div>
+
+    <!-- Admin Overview Statistics -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon purple">👥</div>
+        <div>
+          <div class="stat-value" id="admin-stat-total-users">0</div>
+          <div class="stat-label">Total Registered Users</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon blue">⚡</div>
+        <div>
+          <div class="stat-value" id="admin-stat-active-users">0</div>
+          <div class="stat-label">Active Users (24h)</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon green">🟢</div>
+        <div>
+          <div class="stat-value" id="admin-stat-online-users">0</div>
+          <div class="stat-label">Live Online Sockets</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon purple">💬</div>
+        <div>
+          <div class="stat-value" id="admin-stat-total-messages">0</div>
+          <div class="stat-label">Total Messages (Sheets)</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon orange">⚠️</div>
+        <div>
+          <div class="stat-value" id="admin-stat-pending-reports">0</div>
+          <div class="stat-label">Pending Reports</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 1: User Management -->
+    <div class="section-card" style="margin-top: 2rem;">
+      <div class="section-header" style="flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h2 class="section-title">User Accounts Management</h2>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Passwords and hashes are securely protected and never displayed.</p>
+        </div>
+        <div style="width: 320px;">
+          <input type="text" id="admin-user-search" class="form-input" placeholder="Search by name, email, @handle...">
+        </div>
+      </div>
+
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Email</th>
+              <th>Mobile</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="admin-users-tbody">
+            <tr>
+              <td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-muted);">Loading users from Google Sheets...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Section 2: Moderation & Reports -->
+    <div class="section-card" style="margin-top: 2rem;">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Community Moderation Reports</h2>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Review reports submitted by users against harassment or abuse.</p>
+        </div>
+      </div>
+
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Reporter</th>
+              <th>Reported User</th>
+              <th>Reason</th>
+              <th>Details</th>
+              <th>Status</th>
+              <th>Review</th>
+            </tr>
+          </thead>
+          <tbody id="admin-reports-tbody">
+            <tr>
+              <td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-muted);">Loading reports...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Section 3: Platform Settings -->
+    <div class="section-card" style="margin-top: 2rem;">
+      <h2 class="section-title" style="margin-bottom: 0.5rem;">Platform Settings & Control</h2>
+      <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">
+        Persistent parameters saved in Google Sheets <code>Settings</code> tab.
+      </p>
+
+      <form id="platform-settings-form">
+        <div class="auth-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="setting-platform-name">Platform Brand Name</label>
+            <input type="text" id="setting-platform-name" class="form-input" value="STRANGERS INTO FRIENDS">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="setting-tagline">Hero Tagline</label>
+            <input type="text" id="setting-tagline" class="form-input" value="Meet Strangers. Make Friends. Share Feelings.">
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 2.5rem; margin: 1rem 0 1.5rem; flex-wrap: wrap;">
+          <label style="display: flex; align-items: center; gap: 0.65rem; cursor: pointer; color: #fff;">
+            <input type="checkbox" id="setting-allow-registration" checked style="width: 18px; height: 18px; accent-color: var(--primary);">
+            <span>Allow New User Registrations</span>
+          </label>
+
+          <label style="display: flex; align-items: center; gap: 0.65rem; cursor: pointer; color: #fff;">
+            <input type="checkbox" id="setting-maintenance-mode" style="width: 18px; height: 18px; accent-color: var(--primary);">
+            <span>Maintenance Mode</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Save Platform Settings
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Review Report Action Modal -->
+  <div class="modal-backdrop" id="admin-report-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Review Moderation Report</h3>
+        <button class="modal-close" id="close-report-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="modal-report-id">
+        <input type="hidden" id="modal-reported-user-id">
+
+        <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1rem;">
+          Reported Member: <strong id="modal-report-target-name" style="color: #fff;"></strong>
+        </p>
+        <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.25rem;">
+          Allegation: <span id="modal-report-reason" class="badge badge-danger"></span>
+        </p>
+
+        <div class="form-group">
+          <label class="form-label" for="modal-admin-notes">Internal Administrator Notes</label>
+          <textarea id="modal-admin-notes" class="form-textarea" placeholder="Add notes on action taken or justification..."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer" style="flex-wrap: wrap;">
+        <button class="btn btn-outline btn-sm" onclick="submitReportAction('dismissed', false)">Dismiss Report</button>
+        <button class="btn btn-secondary btn-sm" onclick="submitReportAction('reviewed', false)">Mark Reviewed</button>
+        <button class="btn btn-danger btn-sm" onclick="submitReportAction('action_taken', true)">Suspend User & Resolve</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js" onerror="console.info('Socket.IO offline or local mode')"></script>
+  <script src="js/api.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/socket-client.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

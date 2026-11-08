@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <?!= include('CSS'); ?>
+</head>
+<body>
+  <div class="ambient a1"></div><div class="ambient a2"></div>
+  <header class="topbar">
+    <a class="brand" href="<?= appUrl ?>"> <span class="brand-mark">S</span><span>STRANGERS <b>INTO</b> FRIENDS</span></a>
+    <nav><a href="#about">About</a><a href="#safety">Safety</a><button class="btn ghost" id="navLogin">Log in</button><button class="btn primary" id="navSignup">Join free</button></nav>
+  </header>
+  <main>
+    <section id="landing" class="hero wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> A little hello can go a long way</div>
+        <h1>Strangers today.<br><span>Friends tomorrow.</span></h1>
+        <p>Meet people beyond your usual circle. Start with a random conversation or find someone who shares your interests.</p>
+        <div class="hero-actions"><button class="btn primary large" id="heroJoin">Find your people <span>→</span></button><button class="btn secondary large" id="heroLogin">I already have an account</button></div>
+        <div class="trustline"><span>✦ Random chat</span><span>✦ Shared interests</span><span>✦ Your pace, your choice</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit1"></div><div class="orbit orbit2"></div>
+        <div class="chat-card card-one"><div class="avatar violet">A</div><div><b>Alex</b><small>Into technology</small></div><span class="online"></span></div>
+        <div class="chat-card card-two"><div class="avatar blue">M</div><div><b>Maya</b><small>Loves music + movies</small></div><span class="online"></span></div>
+        <div class="chat-card card-three"><div class="avatar pink">J</div><div><b>Jordan</b><small>Here to make friends</small></div><span class="online"></span></div>
+        <div class="connect-core"><div class="core-icon">✧</div><b>New connections</b><small>Start with hello.</small></div>
+      </div>
+    </section>
+    <section id="about" class="wrap feature-section"><div class="section-heading"><span class="eyebrow">HOW IT WORKS</span><h2>Good conversations<br>start <span>anywhere.</span></h2></div>
+      <div class="feature-grid"><article class="feature"><div class="feature-icon">⌁</div><h3>Random connection</h3><p>Meet an available person and see where the conversation goes.</p></article><article class="feature"><div class="feature-icon">✳</div><h3>Match by interests</h3><p>Find people who enjoy the same topics, hobbies and ideas.</p></article><article class="feature"><div class="feature-icon">◉</div><h3>Chat at your pace</h3><p>Skip, end, block or report a conversation whenever you need.</p></article></div>
+    </section>
+    <section id="safety" class="wrap safety"><div><span class="eyebrow">YOUR COMFORT MATTERS</span><h2>Be curious.<br><span>Stay in control.</span></h2><p>Never share passwords, financial details or your home address with someone you just met. You can leave a chat, block a person and report concerning behaviour.</p></div><div class="safety-list"><div>✓ <span>18+ community</span></div><div>✓ <span>Private account details</span></div><div>✓ <span>Block and report tools</span></div><div>✓ <span>Secure password hashing</span></div></div></section>
+  </main>
+  <footer class="footer"><span>© <span id="year"></span> STRANGERS INTO FRIENDS</span><div><a href="?page=admin">Admin</a><a href="#privacy" id="privacyLink">Privacy</a><a href="#terms" id="termsLink">Terms</a></div></footer>
+
+  <div class="modal-backdrop hidden" id="authModal"><section class="modal">
+    <button class="close" id="closeAuth">×</button><div class="modal-brand">S</div><div id="authContent"></div>
+  </section></div>
+  <div class="app-shell hidden" id="appShell">
+    <aside class="sidebar"><a class="brand" href="#"><span class="brand-mark">S</span><span>STRANGERS<br>INTO FRIENDS</span></a><div class="side-user"><div class="avatar blue" id="sideAvatar">U</div><div><b id="sideName">User</b><small>Member</small></div></div>
+      <button class="side-link active" data-view="dashboard">⌂ <span>Dashboard</span></button><button class="side-link" data-view="random">✧ <span>Random chat</span></button><button class="side-link" data-view="interest">✳ <span>Interest chat</span></button><button class="side-link" data-view="profile">◉ <span>My profile</span></button><div class="side-bottom"><button class="side-link" id="logoutBtn">↪ <span>Log out</span></button></div>
+    </aside>
+    <section class="app-main"><header class="app-top"><div><span class="eyebrow">YOUR SPACE</span><h2 id="viewTitle">Dashboard</h2></div><div class="status-chip"><span class="online"></span> Online</div></header>
+      <div id="viewContent"></div>
+    </section>
+  </div>
+  <div id="toast" class="toast"></div>
+  <?!= include('JavaScript'); ?>
+</body></html>

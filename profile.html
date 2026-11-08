@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile — STRANGERS INTO FRIENDS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="dashboard.html" class="brand-logo">
+        <div class="logo-icon">💬</div>
+        <span>STRANGERS <span class="gradient-text">INTO FRIENDS</span></span>
+      </a>
+
+      <div class="nav-actions" id="nav-user-area">
+        <!-- Injected via utils.js -->
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 3rem 1.5rem 5rem; max-width: 860px;">
+    <!-- Profile Card Container -->
+    <div class="glass-card" style="padding: 2.5rem; text-align: center; position: relative;">
+      <!-- Avatar with ring -->
+      <div class="avatar-wrapper" style="margin-bottom: 1.25rem;">
+        <img id="profile-avatar" src="https://ui-avatars.com/api/?name=User&background=7c3aed&color=fff&size=200" style="width: 110px; height: 110px; border-radius: 50%; border: 4px solid var(--primary); object-fit: cover; box-shadow: var(--shadow-glow);" alt="Avatar">
+      </div>
+
+      <h1 id="profile-name" style="font-size: 1.85rem; color: #fff; margin-bottom: 0.25rem;">Loading...</h1>
+      <p id="profile-handle" style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.25rem;">@username</p>
+
+      <!-- Profile Bio -->
+      <p id="profile-bio" style="font-size: 1.05rem; color: var(--text-secondary); max-width: 620px; margin: 0 auto 2rem; line-height: 1.6; background: rgba(255, 255, 255, 0.03); padding: 1.25rem 1.5rem; border-radius: 12px; border: 1px solid var(--border-subtle);">
+        Loading bio...
+      </p>
+
+      <!-- Profile Details Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; text-align: left;">
+        <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 10px; border: 1px solid var(--border-subtle);">
+          <div style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Location</div>
+          <div id="profile-location" style="font-size: 0.95rem; font-weight: 600; color: #fff; margin-top: 3px;">Earth</div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 10px; border: 1px solid var(--border-subtle);">
+          <div style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Gender</div>
+          <div id="profile-gender" style="font-size: 0.95rem; font-weight: 600; color: #fff; margin-top: 3px;">Not specified</div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 10px; border: 1px solid var(--border-subtle);">
+          <div style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Member Since</div>
+          <div id="profile-joined" style="font-size: 0.95rem; font-weight: 600; color: #fff; margin-top: 3px;">2026</div>
+        </div>
+      </div>
+
+      <!-- Action Buttons Area -->
+      <div id="profile-actions-container" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <button id="btn-edit-profile" class="btn btn-primary" style="display: none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          Edit Profile
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Edit Profile Modal -->
+  <div class="modal-backdrop" id="edit-profile-modal">
+    <div class="modal-content" style="max-width: 580px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Edit Your Profile</h3>
+        <button class="modal-close" id="close-edit-modal">&times;</button>
+      </div>
+      <form id="edit-profile-form">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label" for="edit-fullname">Full Name</label>
+            <input type="text" id="edit-fullname" class="form-input" required minlength="2">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="edit-avatar">Profile Picture URL</label>
+            <input type="url" id="edit-avatar" class="form-input" placeholder="https://example.com/avatar.jpg">
+          </div>
+
+          <div class="auth-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="edit-location">Location</label>
+              <input type="text" id="edit-location" class="form-input" placeholder="e.g. London, UK">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="edit-gender">Gender</label>
+              <select id="edit-gender" class="form-select">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Non-binary">Non-binary</option>
+                <option value="Other">Other</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="edit-mobile">Mobile Number</label>
+            <input type="tel" id="edit-mobile" class="form-input">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="edit-bio">Bio</label>
+            <textarea id="edit-bio" class="form-textarea" rows="3" placeholder="Tell friends about yourself..."></textarea>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="document.getElementById('edit-profile-modal').classList.remove('open')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js" onerror="console.info('Socket.IO offline or local mode')"></script>
+  <script src="js/api.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/socket-client.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>
